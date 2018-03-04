@@ -9,11 +9,9 @@ def getGeocodeLocation(inputString):
 	h = httplib2.Http()
 	response, content = h.request(url, 'GET')
 	result = json.loads(content)
-	print "response header: %s \n \n"%response
-	print("*"*20)
-	print result
+	#print "response header: %s \n \n"%response
+	#print result
 	latitude = result['results'][0]['geometry']['location']['lat']
 	longitude = result['results'][0]['geometry']['location']['lng']
 	return (latitude, longitude)
 
-getGeocodeLocation('Dallas, Texas')

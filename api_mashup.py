@@ -13,7 +13,11 @@ foursquare_client_secret = "TTFJODOXG4YWM1AOGMJLURBHNUFVCAMDXTYJ4K1J2TAYYBRO"
 
 def findARestaurant(mealType,location):
 	#1. Use getGeocodeLocation to get the latitude and longitude coordinates of the location string.
-	
+	latitude, longitude = getGeocodeLocation(location)
+	print latitude
+	print longitude
+
+	return
 	
 	#2.  Use foursquare API to find a nearby restaurant with the latitude, longitude, and mealType strings.
 	#HINT: format for url will be something like https://api.foursquare.com/v2/venues/search?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20130815&ll=40.7,-74&query=sushi
