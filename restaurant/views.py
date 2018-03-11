@@ -29,10 +29,12 @@ def all_restaurants_handler():
   	return jsonify(restaurants = [i.serialize for i in restaurants])
 
   elif request.method == 'POST':
-  	location = request.args.get('location')
-  	mealtype = request.args.get('mealtype')
-  	restaurant_info = findARestaurant(mealtype, location)
-  	if restaurant_info != 'No Restaurants Found':
+  	#location = request.args.get('location')
+  	#mealtype = request.args.get('mealType')
+    location = 'Lima+Peru'
+    mealtype = 'sushi'
+    restaurant_info = findARestaurant(mealtype, location)
+    if restaurant_info != 'No Restaurants Found':
   		restaurant = Restaurant(restaurant_name = restaurant_info['name'],
   								restaurant_address = restaurant_info['address'],
   								restaurant_image = restaurant_info['image'])
@@ -40,7 +42,7 @@ def all_restaurants_handler():
   		session.add(restaurant)
   		session.commit()
   		return jsonify(restaurant = restaurant.serialize)
-  	else:
+    else:
   		return jsonify({"error":"No restaurants found for %s and %s"%(location, mealtype)})
 
     

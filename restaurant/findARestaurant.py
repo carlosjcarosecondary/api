@@ -9,7 +9,7 @@ sys.stderr = codecs.getwriter('utf8')(sys.stderr)
 
 foursquare_client_id = '542SEDG5TXXHOPT1IITPXGMTT3AVPC3YEKIZKRO44ZXCQCRI'
 foursquare_client_secret = 'TTFJODOXG4YWM1AOGMJLURBHNUFVCAMDXTYJ4K1J2TAYYBRO'
-google_api_key = 'AIzaSyD-BwQdPuXq7ouBZEjXVgkmhrFcFs9X8Jw'
+google_api_key = 'AIzaSyB6LWh68ubYL5XxNsynDx0dPVJa_xFaahw'
 
 def getGeocodeLocation(inputString):
     #Replace Spaces with '+' in URL
